@@ -15,3 +15,7 @@
 
 # Ignore MDX files
 *.mdx
+!/data
+!/tests
+!/scripts
+!astro-paper.config.ts
