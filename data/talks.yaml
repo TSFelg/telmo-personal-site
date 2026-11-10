@@ -1,4 +1,11 @@
 # Talks are sorted by event date, newest first.
+- id: unreasonable-effectiveness-language-models-biology
+  title: "The Unreasonable Effectiveness of Language Models in Biology"
+  event: "Loka Core, Skopje"
+  event_url: "https://www.loka.com/registrations/loka-core-skopje"
+  date: 2026-11-07
+  kind: talk
+
 - id: biollms-for-ai-driven-drug-discovery
   title: "BioLLMs for AI-driven drug discovery"
   event: "Data Makers Fest"
