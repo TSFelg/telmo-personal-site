@@ -1,6 +1,6 @@
 # Telmo’s personal site
 
-A light-only, text-first personal site built with [Astro](https://astro.build) and [AstroPaper](https://github.com/satnaing/astro-paper). Talks come first; blog posts can be added when ready. No demo talks or posts are published. The typography uses self-hosted Vollkorn, with a warm paper background and dark red links inspired by [LJ Miranda’s site](https://ljvmiranda921.github.io/).
+A light-only, text-first personal site built with [Astro](https://astro.build) and [AstroPaper](https://github.com/satnaing/astro-paper). Talks come first; blog posts can be added when ready. No demo talks or posts are published. The typography uses self-hosted Vollkorn, with a warm paper background and muted purple links and a compact type scale.
 
 ## Local development
 

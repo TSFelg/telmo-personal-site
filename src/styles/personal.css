@@ -2,8 +2,8 @@
   color-scheme: light;
 }
 body {
-  font-size: 1.25rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.65;
   font-kerning: normal;
   font-variant-numeric: lining-nums;
 }
@@ -12,19 +12,19 @@ body {
   align-items: baseline;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 2.5rem 0 1.5rem;
+  padding: 2rem 0 1.25rem;
   border-bottom: 1px solid var(--border);
 }
 .site-name {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
 }
 .site-header nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem 1.1rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 a:hover {
   color: var(--accent);
@@ -51,19 +51,20 @@ a:hover {
   padding-bottom: 4rem;
 }
 .intro {
-  padding: 3.5rem 0 2.75rem;
+  padding: 2.5rem 0 2.25rem;
 }
-.intro h1 {
-  font-size: clamp(2rem, 5vw, 2.6rem);
+.intro h1,
+.page-title {
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
   line-height: 1.2;
-  font-weight: 500;
-  margin-bottom: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 .intro p {
   max-width: 42rem;
 }
 .home-section {
-  padding: 2rem 0 2.25rem;
+  padding: 1.75rem 0 2rem;
   border-top: 1px solid var(--border);
 }
 .section-heading {
@@ -74,24 +75,23 @@ a:hover {
   margin-bottom: 1.1rem;
 }
 .section-heading h2 {
-  font-size: 1.65rem;
-  font-weight: 600;
-  font-variant-caps: small-caps;
-  letter-spacing: 0.025em;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 .section-heading > a {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--accent);
 }
 .empty-note {
   color: var(--muted-foreground);
-  font-size: 1.15rem;
+  font-size: 1.0625rem;
 }
 .talk-year {
   margin: 2rem 0 2.5rem;
 }
 .talk-year > h2 {
-  font-size: 1.1rem;
+  font-size: 0.9375rem;
   color: var(--muted-foreground);
   margin-bottom: 1.2rem;
 }
@@ -99,11 +99,11 @@ a:hover {
   margin-bottom: 1.6rem;
 }
 .talk-list h3 {
-  font-size: 1.35rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 .talk-details {
-  font-size: 1.05rem;
+  font-size: 0.9375rem;
   color: var(--muted-foreground);
   margin-top: 0.25rem;
 }
@@ -118,12 +118,12 @@ a:hover {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.5rem 0;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--muted-foreground);
 }
 @media (max-width: 639px) {
   body {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
   }
   .site-header {
     display: block;
@@ -134,7 +134,7 @@ a:hover {
     gap: 0.5rem 1.1rem;
   }
   .intro {
-    padding: 2.5rem 0 2rem;
+    padding: 2rem 0 1.75rem;
   }
   .home-content {
     padding-bottom: 3rem;

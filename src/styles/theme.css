@@ -13,9 +13,9 @@
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fffff8;
+  --background: #fbfaf8;
   --foreground: #20201d;
-  --accent: #a31515;
+  --accent: #6b4ca3;
   --accent-foreground: #ffffff;
   --muted: #e6e6e6;
   --muted-foreground: #65655d;
