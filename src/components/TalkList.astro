@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { sortTalks, talkLinks } from "@/utils/talks";
+import { getAssetPath } from "@/utils/withBase";
+type Props = { talks: CollectionEntry<"talks">[] };
+const talks = sortTalks(Astro.props.talks);
+const years = [...new Set(talks.map(talk => talk.data.date.getUTCFullYear()))];
+const resourceHref = (href: string) =>
+  href.startsWith("/") ? getAssetPath(href) : href;
+---
+
+{
+  years.map(year => (
+    <section class="talk-year" aria-labelledby={`year-${year}`}>
+      <h2 id={`year-${year}`}>{year}</h2>
+      <ul class="talk-list">
+        {talks
+          .filter(talk => talk.data.date.getUTCFullYear() === year)
+          .map(({ id, data }) => (
+            <li id={id}>
+              <h3>{data.title}</h3>
+              <p class="talk-details">
+                {data.event_url ? (
+                  <a href={data.event_url}>{data.event}</a>
+                ) : (
+                  <span>{data.event}</span>
+                )}
+                {data.kind !== "talk" && (
+                  <>
+                    <span aria-hidden="true"> · </span>
+                    <span>{data.kind}</span>
+                  </>
+                )}
+                {talkLinks(data).map(link => (
+                  <>
+                    <span aria-hidden="true"> · </span>
+                    <a href={resourceHref(link.href)}>{link.label}</a>
+                  </>
+                ))}
+              </p>
+            </li>
+          ))}
+      </ul>
+    </section>
+  ))
+}

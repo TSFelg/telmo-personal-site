@@ -48,6 +48,13 @@ const publishDate = (post: CollectionEntry<"posts">) =>
 
   <Main pageTitle={t.pages.archivesTitle} pageDesc={t.pages.archivesDesc}>
     {
+      filteredPosts.length === 0 && (
+        <p class="empty-note">
+          Published posts will appear here, grouped by year.
+        </p>
+      )
+    }
+    {
       Object.entries(
         getPostsByGroupCondition(filteredPosts, post =>
           publishDate(post).year()

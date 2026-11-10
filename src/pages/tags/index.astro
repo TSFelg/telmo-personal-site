@@ -23,6 +23,13 @@ const t = useTranslations(locale);
   <Breadcrumb />
 
   <Main pageTitle={t.pages.tagsTitle} pageDesc={t.pages.tagsDesc}>
+    {
+      tags.length === 0 && (
+        <p class="empty-note">
+          Tags will appear here when the first posts are published.
+        </p>
+      )
+    }
     <ul class="flex flex-wrap gap-6">
       {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} />)}
     </ul>

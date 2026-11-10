@@ -1,6 +1,6 @@
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
-import { glob } from "astro/loaders";
+import { glob, file } from "astro/loaders";
 import config from "@/config";
 
 export const BLOG_PATH = "src/content/posts";
@@ -39,4 +39,31 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { posts, pages };
+const httpUrl = z
+  .url()
+  .refine(value => /^https?:\/\//.test(value), "Use an http or https URL");
+const resourceUrl = z.union([
+  httpUrl,
+  z
+    .string()
+    .regex(/^\/(?!\/)[^\s]*$/, "Use a site-relative path starting with /"),
+]);
+const optionalLink = resourceUrl.optional().or(z.literal(""));
+
+const talks = defineCollection({
+  loader: file("data/talks.yaml"),
+  schema: z.object({
+    title: z.string().min(1),
+    event: z.string().min(1),
+    date: z.coerce.date(),
+    event_url: httpUrl.optional().or(z.literal("")),
+    slides: optionalLink,
+    video: optionalLink,
+    post: optionalLink,
+    kind: z.enum(["talk", "podcast", "panel", "workshop"]).default("talk"),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { posts, pages, talks };

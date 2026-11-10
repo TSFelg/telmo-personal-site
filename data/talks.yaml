@@ -1,0 +1,12 @@
+# Replace this draft with your first talk. Set draft to false to publish it.
+# Add further entries below; the site sorts by date automatically.
+- id: first-talk
+  title: "Your talk title"
+  event: "Event name"
+  date: 2026-11-09
+  kind: talk
+  draft: true
+  # event_url: "https://example.com/event"
+  # slides: "/slides/your-talk.pdf"
+  # video: "https://www.youtube.com/watch?v=..."
+  # post: "/posts/your-write-up/"

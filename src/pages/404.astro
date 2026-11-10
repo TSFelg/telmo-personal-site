@@ -11,7 +11,11 @@ const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 ---
 
-<Layout title={`${t.notFound.title} | ${config.site.title}`}>
+<Layout
+  title={`${t.notFound.title} | ${config.site.title}`}
+  canonicalURL={new URL("404.html", config.site.url).href}
+>
+  <meta slot="head" name="robots" content="noindex" />
   <Header />
 
   <main

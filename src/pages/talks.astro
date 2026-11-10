@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import TalkList from "@/components/TalkList.astro";
+import { sortTalks } from "@/utils/talks";
+const talks = sortTalks(await getCollection("talks"));
+---
+
+<Layout
+  title="Talks | Telmo"
+  description="Talks, panels and workshops, with slides and recordings."
+>
+  <Header /><Breadcrumb />
+  <Main
+    pageTitle="Talks"
+    pageDesc="Presentations, panels and workshops. Slides and recordings, all in one place."
+  >
+    <div data-pagefind-body>
+      {
+        talks.length > 0 ? (
+          <TalkList {talks} />
+        ) : (
+          <p class="empty-note">
+            I’m gathering my slides and recordings. They’ll appear here soon.
+          </p>
+        )
+      }
+    </div>
+  </Main>
+  <Footer />
+</Layout>
