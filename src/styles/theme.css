@@ -7,17 +7,17 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-vollkorn);
 }
 
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #faf9f6;
-  --foreground: #292824;
-  --accent: #3a5e78;
+  --background: #fffff8;
+  --foreground: #20201d;
+  --accent: #a31515;
   --accent-foreground: #ffffff;
   --muted: #e6e6e6;
-  --muted-foreground: #6b6861;
-  --border: #e3e0d8;
+  --muted-foreground: #65655d;
+  --border: #cfcdc2;
 }
