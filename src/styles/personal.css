@@ -192,6 +192,14 @@ a:hover {
   .page-main {
     padding-bottom: 3rem;
   }
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .site-footer .social-links {
+    margin-left: -0.625rem;
+  }
 }
 @media (max-width: 479px) {
   .talk-list > li {

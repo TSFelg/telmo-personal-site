@@ -33,6 +33,16 @@ export default defineAstroPaperConfig({
       url: "https://www.linkedin.com/in/telmo-felgueira/",
       linkTitle: "LinkedIn",
     },
+    {
+      name: "scholar",
+      url: "https://scholar.google.com/citations?user=WBahNhkAAAAJ&hl=pt-PT",
+      linkTitle: "Google Scholar",
+    },
+    {
+      name: "goodreads",
+      url: "https://www.goodreads.com/user/show/20064238",
+      linkTitle: "Goodreads",
+    },
   ],
   shareLinks: [],
 });
