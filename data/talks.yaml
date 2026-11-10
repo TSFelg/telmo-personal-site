@@ -8,6 +8,15 @@
   kind: talk
   video: "https://www.youtube.com/watch?v=kYw1Q3sC5iw"
 
+- id: biollms-aws-hcls-boston
+  # Descriptive title based on the announcement; no formal session title is given.
+  title: "BioLLMs for drug discovery"
+  event: "AWS HCLS Meetup, Boston"
+  event_url: "https://www.linkedin.com/posts/telmo-felgueira_heya-everyone-im-excited-to-announce-activity-7173297778800934912-qO_J/"
+  # The March 12 announcement places the presentation in the preceding week.
+  date: "2024-03"
+  kind: talk
+
 - id: trends-and-challenges-in-llm-systems
   title: "Trends and Challenges in LLM Systems"
   event: "PyData Lisbon"
