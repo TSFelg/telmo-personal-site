@@ -3,8 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 // Change this URL to move the site to a custom domain.
 export default defineAstroPaperConfig({
   site: {
-    url:
-      process.env.SITE_URL ?? "https://tsfelg.github.io/telmo-personal-site/",
+    url: process.env.SITE_URL ?? "https://tsfelg.github.io/",
     title: "Telmo",
     description: "Talks, slides and technical notes by Telmo.",
     author: "Telmo",

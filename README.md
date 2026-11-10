@@ -11,7 +11,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open the local URL printed by Astro, including the `/telmo-personal-site/` prefix. To inspect search, build first: Pagefind generates its index during the production build.
+Open the local URL printed by Astro. To inspect search, build first: Pagefind generates its index during the production build.
 
 ```sh
 pnpm test
@@ -57,9 +57,9 @@ No employer, biography, contact address, or social profile is guessed. Add those
 
 ## GitHub Pages
 
-The default URL is `https://tsfelg.github.io/telmo-personal-site/`. This uses a new project repository and leaves the existing `tsfelg.github.io` repository untouched.
+The repository is `TSFelg/tsfelg.github.io` and the default URL is `https://tsfelg.github.io/`.
 
-In the repository’s **Settings → Pages**, set the source to **GitHub Actions**. The deploy workflow builds and publishes every push to `main`. CI also checks pull requests and verifies both the project URL and a root-domain configuration. Build output, dependencies, local credentials, and environment files are not committed.
+In the repository’s **Settings → Pages**, set the source to **GitHub Actions**. The deploy workflow builds and publishes every push to `main`. CI also checks pull requests and verifies both the root URL and a subdirectory configuration. Build output, dependencies, local credentials, and environment files are not committed.
 
 ## Custom domain
 

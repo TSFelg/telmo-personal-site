@@ -21,7 +21,7 @@ jobs:
       - name: Check formatting of project customizations
         run: pnpm exec prettier --check data tests scripts README.md .github/workflows src/components/Header.astro src/components/Footer.astro src/components/TalkList.astro src/utils/talks.ts src/styles/personal.css
       - run: pnpm build
-      - name: Verify a root-domain deployment
+      - name: Verify a subdirectory deployment
         run: pnpm build
         env:
-          SITE_URL: https://example.com/
+          SITE_URL: https://example.com/blog/
