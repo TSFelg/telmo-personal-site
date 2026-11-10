@@ -34,6 +34,11 @@ export default defineAstroPaperConfig({
       linkTitle: "LinkedIn",
     },
     {
+      name: "x",
+      url: "https://x.com/TSFelg",
+      linkTitle: "Twitter / X",
+    },
+    {
       name: "scholar",
       url: "https://scholar.google.com/citations?user=WBahNhkAAAAJ&hl=pt-PT",
       linkTitle: "Google Scholar",
