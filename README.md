@@ -38,7 +38,7 @@ Edit `data/talks.yaml`. Replace the bundled draft, or append another entry:
   post: "/posts/your-write-up/"
 ```
 
-Every entry needs a unique `id`, title, event, and date. Optional links can be omitted or left empty. Remove the example links you do not have. Dates sort newest first and are grouped by year. `kind` accepts `talk`, `panel`, `workshop`, or `podcast`. Set `draft: true` to keep an entry off the site.
+Every entry needs a unique `id`, title, event, and date. Optional links can be omitted or left empty. Remove the example links you do not have. Dates sort newest first and are grouped by year. If only the month is known, use a quoted `YYYY-MM` value, such as `"2024-09"`; it sorts from the start of that month without claiming a presentation day. `kind` accepts `talk`, `panel`, `workshop`, or `podcast`. Set `draft: true` to keep an entry off the site.
 
 Put slide PDFs in `public/slides/`. Use paths such as `/slides/your-talk.pdf`; the site adds its deployment prefix automatically. External slide URLs also work. YAML fields are validated at build time, and broken local links fail the build.
 

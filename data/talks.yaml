@@ -1,4 +1,13 @@
 # Talks are sorted by event date, newest first.
+- id: biollms-for-ai-driven-drug-discovery
+  title: "BioLLMs for AI-driven drug discovery"
+  event: "Data Makers Fest"
+  event_url: "https://www.datamakersfest.com/"
+  # Event month is confirmed; the exact presentation day is not.
+  date: "2024-09"
+  kind: talk
+  video: "https://www.youtube.com/watch?v=kYw1Q3sC5iw"
+
 - id: trends-and-challenges-in-llm-systems
   title: "Trends and Challenges in LLM Systems"
   event: "PyData Lisbon"
