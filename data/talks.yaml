@@ -1,5 +1,13 @@
-# Replace this draft with your first talk. Set draft to false to publish it.
-# Add further entries below; the site sorts by date automatically.
+# Talks are sorted by event date, newest first.
+- id: trends-and-challenges-in-llm-systems
+  title: "Trends and Challenges in LLM Systems"
+  event: "PyData Lisbon"
+  event_url: "https://www.meetup.com/pydata-lisbon/events/297070615/"
+  date: 2023-11-22
+  kind: talk
+  slides: "https://www.linkedin.com/posts/telmo-felgueira_pydata-lisbon-trends-and-challenges-in-llm-activity-7133860957893636097-fCrN/"
+
+# Draft template for another talk. Set draft to false to publish it.
 - id: first-talk
   title: "Your talk title"
   event: "Event name"
