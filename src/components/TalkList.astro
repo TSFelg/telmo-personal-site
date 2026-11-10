@@ -2,45 +2,52 @@
 import type { CollectionEntry } from "astro:content";
 import { sortTalks, talkLinks } from "@/utils/talks";
 import { getAssetPath } from "@/utils/withBase";
-type Props = { talks: CollectionEntry<"talks">[] };
+
+type Props = {
+  talks: CollectionEntry<"talks">[];
+  heading?: "h2" | "h3";
+};
+const { heading: Heading = "h3" } = Astro.props;
 const talks = sortTalks(Astro.props.talks);
-const years = [...new Set(talks.map(talk => talk.data.date.getUTCFullYear()))];
+const dateFormat = new Intl.DateTimeFormat("en", {
+  month: "short",
+  year: "numeric",
+  timeZone: "UTC",
+});
 const resourceHref = (href: string) =>
   href.startsWith("/") ? getAssetPath(href) : href;
 ---
 
-{
-  years.map(year => (
-    <section class="talk-year" aria-labelledby={`year-${year}`}>
-      <h2 id={`year-${year}`}>{year}</h2>
-      <ul class="talk-list">
-        {talks
-          .filter(talk => talk.data.date.getUTCFullYear() === year)
-          .map(({ id, data }) => (
-            <li id={id}>
-              <h3>{data.title}</h3>
-              <p class="talk-details">
-                {data.event_url ? (
-                  <a href={data.event_url}>{data.event}</a>
-                ) : (
-                  <span>{data.event}</span>
-                )}
-                {data.kind !== "talk" && (
-                  <>
-                    <span aria-hidden="true"> · </span>
-                    <span>{data.kind}</span>
-                  </>
-                )}
-                {talkLinks(data).map(link => (
-                  <>
-                    <span aria-hidden="true"> · </span>
-                    <a href={resourceHref(link.href)}>{link.label}</a>
-                  </>
-                ))}
-              </p>
-            </li>
-          ))}
-      </ul>
-    </section>
-  ))
-}
+<ul class="talk-list" role="list">
+  {
+    talks.map(({ id, data }) => (
+      <li id={id}>
+        <time class="talk-date" datetime={data.date.toISOString().slice(0, 7)}>
+          {dateFormat.format(data.date)}
+        </time>
+        <div>
+          <Heading class="talk-title">{data.title}</Heading>
+          <p class="talk-details">
+            {data.event_url ? (
+              <a href={data.event_url}>{data.event}</a>
+            ) : (
+              <span>{data.event}</span>
+            )}
+            {data.kind !== "talk" && (
+              <>
+                <span aria-hidden="true"> · </span>
+                <span>{data.kind}</span>
+              </>
+            )}
+            {talkLinks(data).map(link => (
+              <>
+                <span aria-hidden="true"> · </span>
+                <a href={resourceHref(link.href)}>{link.label}</a>
+              </>
+            ))}
+          </p>
+        </div>
+      </li>
+    ))
+  }
+</ul>

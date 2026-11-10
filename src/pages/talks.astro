@@ -22,7 +22,7 @@ const talks = sortTalks(await getCollection("talks"));
     <div data-pagefind-body>
       {
         talks.length > 0 ? (
-          <TalkList {talks} />
+          <TalkList {talks} heading="h2" />
         ) : (
           <p class="empty-note">
             I’m gathering my slides and recordings. They’ll appear here soon.
