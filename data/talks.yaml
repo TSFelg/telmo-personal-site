@@ -32,6 +32,14 @@
   kind: talk
   slides: "https://www.linkedin.com/posts/telmo-felgueira_pydata-lisbon-trends-and-challenges-in-llm-activity-7133860957893636097-fCrN/"
 
+- id: podcast-transcription-ai-engineering-use-case
+  title: "Podcast Transcription: An AI Engineering Use Case"
+  event: "DSPT Lisbon"
+  event_url: "https://www.meetup.com/datascienceportugal/events/296408588/"
+  date: 2023-10-18
+  kind: talk
+  slides: "https://docs.google.com/presentation/d/1kipN65jsNDU6x2Gws9_uy5QmpU6Vc-3Mh3t0FiXcq7o/edit?usp=sharing"
+
 # Draft template for another talk. Set draft to false to publish it.
 - id: first-talk
   title: "Your talk title"
