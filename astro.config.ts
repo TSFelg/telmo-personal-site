@@ -76,7 +76,17 @@ export default defineConfig({
       fallbacks: ["Georgia", "serif"],
       weights: [400, 500, 600, 700],
       styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
+      formats: ["woff2"],
+      subsets: ["latin"],
+    },
+    {
+      // Satori needs TrueType files at build time; browsers only use WOFF2.
+      name: "Vollkorn",
+      cssVariable: "--font-vollkorn-og",
+      provider: fontProviders.google(),
+      weights: [400, 700],
+      styles: ["normal"],
+      formats: ["ttf"],
     },
   ],
   env: {

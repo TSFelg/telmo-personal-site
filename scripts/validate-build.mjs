@@ -34,6 +34,18 @@ for (const file of files) {
     !html.includes("Your talk title") && !html.includes("Your first post"),
     `${file} leaks draft content`
   );
+  const fontPreloads = [...html.matchAll(/<link\b[^>]*rel="preload"[^>]*>/g)]
+    .map(([tag]) => tag)
+    .filter(tag => tag.includes('as="font"'));
+  assert(fontPreloads.length > 0, `${file}: critical fonts are not preloaded`);
+  assert(
+    fontPreloads.every(tag => tag.includes('type="font/woff2"')),
+    `${file}: font preloads must use WOFF2`
+  );
+  assert(
+    !html.includes('format("truetype")'),
+    `${file}: build-only TrueType fonts leaked into page CSS`
+  );
   const pagePath =
     file === "index.html" ? "" : file.replace(/index\.html$/, "");
   const page = new URL(pagePath, site);
