@@ -1,8 +1,10 @@
 :root {
   color-scheme: light;
+  --type-body: 1.125rem;
+  --type-title: 1.75rem;
 }
 body {
-  font-size: 1.125rem;
+  font-size: var(--type-body);
   line-height: 1.65;
   font-kerning: normal;
   font-variant-numeric: lining-nums;
@@ -11,20 +13,17 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding: 2rem 0 1.25rem;
-  border-bottom: 1px solid var(--border);
+  gap: 2rem;
+  padding-top: 2rem;
 }
 .site-name {
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: var(--type-body);
   font-weight: 500;
 }
 .site-header nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.1rem;
-  font-size: 1rem;
+  gap: 0.4rem 1.125rem;
 }
 a:hover {
   color: var(--accent);
@@ -47,76 +46,86 @@ a:hover {
 .skip-link:focus {
   top: 1rem;
 }
-.home-content {
+.home-content,
+.page-main {
   padding-bottom: 4rem;
 }
+.page-main {
+  padding-top: 3rem;
+}
 .intro {
-  padding: 2.5rem 0 2.25rem;
+  padding: 3rem 0 2.5rem;
 }
 .intro h1,
 .page-title {
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
-  line-height: 1.2;
+  font-size: var(--type-title);
   font-weight: 400;
-  margin-bottom: 1rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
 }
 .intro p {
-  max-width: 42rem;
+  max-width: 38rem;
+}
+.page-description {
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
 }
 .home-section {
-  padding: 1.75rem 0 2rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--border);
+}
+.home-section + .home-section {
+  margin-top: 2.5rem;
 }
 .section-heading {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 .section-heading h2 {
-  font-size: 1.25rem;
+  font-size: var(--type-body);
   font-weight: 500;
-  letter-spacing: 0;
 }
 .section-heading > a {
-  font-size: 1rem;
   color: var(--accent);
 }
 .empty-note {
   color: var(--muted-foreground);
-  font-size: 1.0625rem;
 }
 .talk-list {
   display: grid;
   gap: 1.5rem;
-  padding: 0.125rem 0 0.375rem;
 }
 .talk-list > li {
   display: grid;
-  grid-template-columns: 5rem minmax(0, 1fr);
-  column-gap: 1.25rem;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  column-gap: 1.5rem;
   align-items: baseline;
 }
 .talk-date {
-  font-size: 0.875rem;
   color: var(--muted-foreground);
   white-space: nowrap;
 }
 .talk-title {
-  font-size: 1.0625rem;
+  font-size: var(--type-body);
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.65;
   text-wrap: pretty;
 }
 .talk-details {
-  font-size: 0.875rem;
-  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.4em;
   color: var(--muted-foreground);
-  margin-top: 0.25rem;
 }
 .talk-details a {
   color: var(--accent);
+  text-decoration: none;
+}
+.talk-details a:hover,
+.talk-details a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
@@ -126,39 +135,48 @@ a:hover {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.5rem 0;
-  font-size: 0.875rem;
   color: var(--muted-foreground);
 }
+.app-prose {
+  font-size: var(--type-body);
+}
+.app-prose a {
+  color: var(--accent);
+  text-decoration-style: solid;
+}
 @media (max-width: 639px) {
-  body {
-    font-size: 1.0625rem;
+  :root {
+    --type-body: 1.0625rem;
+    --type-title: 1.625rem;
   }
   .site-header {
     display: block;
-    padding-top: 1.75rem;
+    padding-top: 1.5rem;
   }
   .site-header nav {
-    margin-top: 1rem;
-    gap: 0.5rem 1.1rem;
+    margin-top: 0.75rem;
+    column-gap: 0.75rem;
   }
   .intro {
-    padding: 2rem 0 1.75rem;
+    padding: 2.5rem 0 2rem;
   }
-  .home-content {
+  .page-main {
+    padding-top: 2.5rem;
+  }
+  .home-content,
+  .page-main {
     padding-bottom: 3rem;
   }
 }
-
 @media (max-width: 479px) {
   .talk-list > li {
     display: block;
   }
   .talk-date {
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.125rem;
   }
 }
-
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;

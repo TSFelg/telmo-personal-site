@@ -1,6 +1,6 @@
 # Telmo’s personal site
 
-A light-only, text-first personal site built with [Astro](https://astro.build) and [AstroPaper](https://github.com/satnaing/astro-paper). Talks come first; blog posts can be added when ready. No demo talks or posts are published. The typography uses self-hosted Vollkorn, with a warm paper background and muted purple links and a compact type scale.
+A light-only, text-first personal site built with [Astro](https://astro.build) and [AstroPaper](https://github.com/satnaing/astro-paper). Talks come first; blog posts can be added when ready. No demo talks or posts are published. Self-hosted Vollkorn, a warm paper background and muted purple links set the tone. The typography uses two sizes, with hierarchy carried by weight, color and spacing.
 
 ## Local development
 
@@ -44,7 +44,7 @@ Put slide PDFs in `public/slides/`. Use paths such as `/slides/your-talk.pdf`; t
 
 ## Add a post
 
-Copy `src/content/posts/first-post.md` to a new Markdown filename. Set the title, description, `pubDatetime`, tags, and body, then set `draft: false`. Keep the bundled template as a draft or remove it once you have another post. Published posts automatically appear in the homepage feed, Posts, Archive, Tags, RSS, and search.
+Copy `src/content/posts/first-post.md` to a new Markdown filename. Set the title, description, `pubDatetime`, tags, and body, then set `draft: false`. Keep the bundled template as a draft or remove it once you have another post. Published posts automatically appear in the homepage feed, Posts, Archive, Tags, RSS, and search. The homepage feed and post navigation appear once there is a published post.
 
 ## Personal details
 

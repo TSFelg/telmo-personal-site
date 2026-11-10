@@ -13,10 +13,6 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 >
   <div class="site-footer">
     <span>© {new Date().getFullYear()} {config.site.author}</span>
-    <div>
-      <a href={getAssetPath("rss.xml")}>RSS</a><span aria-hidden="true">
-        ·
-      </span><a href="https://github.com/satnaing/astro-paper">AstroPaper</a>
-    </div>
+    <a href={getAssetPath("rss.xml")}>RSS</a>
   </div>
 </footer>

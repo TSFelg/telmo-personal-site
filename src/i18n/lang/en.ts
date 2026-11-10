@@ -52,7 +52,7 @@ export default {
     archivesDesc: "All the articles I've archived.",
 
     searchTitle: "Search",
-    searchDesc: "Search any article ...",
+    searchDesc: "Search talks and posts.",
   },
   a11y: {
     skipToContent: "Skip to content",

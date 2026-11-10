@@ -19,10 +19,10 @@ const backUrl = config.features.showBackButton
 <main
   data-backUrl={backUrl}
   id="main-content"
-  class:list={["app-layout pb-4", className]}
+  class:list={["app-layout page-main", className]}
 >
   <h1 class="page-title">{pageTitle}</h1>
-  <p class="mt-2 mb-6 italic">{pageDesc}</p>
+  {pageDesc && <p class="page-description">{pageDesc}</p>}
   <slot />
 </main>
 

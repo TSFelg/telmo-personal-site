@@ -21,10 +21,7 @@ const url = (path: string) => getRelativeLocaleUrl(locale, path);
   <main id="main-content" class="app-layout home-content" tabindex="-1">
     <section class="intro" aria-labelledby="hello">
       <h1 id="hello">Hi, I’m Telmo.</h1>
-      <p>
-        This is my home for talks, slides and technical notes. I’m starting with
-        presentations I’ve given, with writing to follow.
-      </p>
+      <p>This is my home for talks, slides and technical notes.</p>
       {config.socials.length > 0 && <Socials />}
     </section>
     <section class="home-section" aria-labelledby="talks-heading">
@@ -41,26 +38,21 @@ const url = (path: string) => getRelativeLocaleUrl(locale, path);
         )
       }
     </section>
-    <section class="home-section" aria-labelledby="posts-heading">
-      <div class="section-heading">
-        <h2 id="posts-heading">Posts</h2>{
-          posts.length > 0 && <a href={url("posts")}>All posts →</a>
-        }
-      </div>
-      {
-        posts.length > 0 ? (
+    {
+      posts.length > 0 && (
+        <section class="home-section" aria-labelledby="posts-heading">
+          <div class="section-heading">
+            <h2 id="posts-heading">Posts</h2>
+            <a href={url("posts")}>All posts →</a>
+          </div>
           <ul>
             {posts.slice(0, config.posts.perIndex).map(post => (
               <Card variant="h3" {...post} />
             ))}
           </ul>
-        ) : (
-          <p class="empty-note">
-            No posts yet. For now, this is a place for my talks.
-          </p>
-        )
-      }
-    </section>
+        </section>
+      )
+    }
   </main>
   <Footer />
 </Layout>
