@@ -1,6 +1,7 @@
 ---
 import config from "@/config";
-import LinkButton from "./LinkButton.astro";
+import IconRss from "@/assets/icons/IconRss.svg";
+import { getAssetPath } from "@/utils/withBase";
 
 const { site, socials } = config;
 
@@ -22,15 +23,19 @@ const items = await Promise.all(
 );
 ---
 
-<div class="flex flex-wrap items-center gap-1">
+<nav class="social-links" aria-label="Social links">
   {
     items.map(({ url, title, Icon }) =>
       Icon ? (
-        <LinkButton href={url} class="p-2 hover:rotate-6 sm:p-1" title={title}>
-          <Icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+        <a href={url} title={title}>
+          <Icon aria-hidden="true" focusable="false" />
           <span class="sr-only">{title}</span>
-        </LinkButton>
+        </a>
       ) : null
     )
   }
-</div>
+  <a href={getAssetPath("rss.xml")} title="RSS feed">
+    <IconRss aria-hidden="true" focusable="false" />
+    <span class="sr-only">RSS feed</span>
+  </a>
+</nav>

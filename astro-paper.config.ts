@@ -21,7 +21,18 @@ export default defineAstroPaperConfig({
     search: "pagefind",
     toc: true,
   },
-  // Add your GitHub, LinkedIn or email links here when ready.
-  socials: [],
+  // Add other public profiles here. RSS is included by the Socials component.
+  socials: [
+    {
+      name: "github",
+      url: "https://github.com/TSFelg",
+      linkTitle: "GitHub",
+    },
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/telmo-felgueira/",
+      linkTitle: "LinkedIn",
+    },
+  ],
   shareLinks: [],
 });

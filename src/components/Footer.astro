@@ -1,6 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { getAssetPath } from "@/utils/withBase";
+import Socials from "./Socials.astro";
 import config from "@/config";
 type Props = { noMarginTop?: boolean } & HTMLAttributes<"footer">;
 const { noMarginTop = false, class: className, ...attrs } = Astro.props;
@@ -13,6 +13,6 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 >
   <div class="site-footer">
     <span>© {new Date().getFullYear()} {config.site.author}</span>
-    <a href={getAssetPath("rss.xml")}>RSS</a>
+    <Socials />
   </div>
 </footer>

@@ -66,6 +66,30 @@ a:hover {
 .intro p {
   max-width: 38rem;
 }
+.intro .social-links {
+  margin-top: 1rem;
+  margin-left: -0.625rem;
+}
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--foreground);
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.25rem;
+}
+.social-links svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 1.6;
+}
 .page-description {
   color: var(--muted-foreground);
   margin-bottom: 2rem;
@@ -133,6 +157,7 @@ a:hover {
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   padding: 1.5rem 0;
   color: var(--muted-foreground);
