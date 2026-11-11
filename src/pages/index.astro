@@ -17,8 +17,9 @@ const url = (path: string) => getRelativeLocaleUrl(locale, path);
 ---
 
 <Layout title="Telmo · Talks & notes">
-  <Header home />
+  <Header />
   <main id="main-content" class="app-layout home-content" tabindex="-1">
+    <h1 class="sr-only">{config.site.title}</h1>
     <section class="intro" aria-label="Introduction">
       <p>This is my home for talks, slides and technical notes.</p>
       {config.socials.length > 0 && <Socials />}

@@ -7,10 +7,11 @@
   kind: talk
 
 - id: ia-na-saude-nova-medical-school
-  title: "IA na Saúde"
+  title: "AI in Healthcare"
   event: "NOVA Medical School"
-  # The announcement names Telmo in the healthcare roundtable on May 12.
-  event_url: "https://medjournal.pt/2026/05/05/nova-medical-school-debate-o-futuro-da-inteligencia-artificial-na-saude-em-evento-que-junta-tecnologia-medicina-e-etica/"
+  event_url: "https://nms.unl.pt/pt-pt/comunicacao/noticias-e-eventos/eventos/detalhe/eventid/20030"
+  # The May 5 announcement names Telmo in the healthcare roundtable:
+  # https://medjournal.pt/2026/05/05/nova-medical-school-debate-o-futuro-da-inteligencia-artificial-na-saude-em-evento-que-junta-tecnologia-medicina-e-etica/
   date: 2026-05-12
   kind: panel
 
@@ -34,7 +35,7 @@
 
 - id: delivering-generative-ai-aws-marketplace
   title: "Overcoming the top 5 challenges to delivering generative AI"
-  event: "AWS Marketplace & Loka"
+  event: "AWS webinar"
   event_url: "https://pages.awscloud.com/awsmp-gim-qe9i-webinar-aim-generative-ai-poc-loka.html"
   date: 2024-06-05
   kind: talk
