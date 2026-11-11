@@ -6,6 +6,23 @@
   date: 2026-11-07
   kind: talk
 
+- id: ia-na-saude-nova-medical-school
+  title: "IA na Saúde"
+  event: "NOVA Medical School"
+  # The announcement names Telmo in the healthcare roundtable on May 12.
+  event_url: "https://medjournal.pt/2026/05/05/nova-medical-school-debate-o-futuro-da-inteligencia-artificial-na-saude-em-evento-que-junta-tecnologia-medicina-e-etica/"
+  date: 2026-05-12
+  kind: panel
+
+- id: biollms-hospital-da-luz
+  title: "BioLLMs for AI-driven drug discovery"
+  event: "Hospital da Luz Learning Health"
+  event_url: "https://www.linkedin.com/posts/hospital-da-luz-learning-health_artificial-intelligence-in-healthcare-activity-7318211562878468097-gc0a"
+  # Session 5 of the official December 2024-July 2025 programme:
+  # https://cdn.up.events/upevents/b9b95b18f155ea0c4d365ad4f973fe67/ProgArtificIntelHCSeason315Prova.pdf
+  date: 2025-04-24
+  kind: talk
+
 - id: biollms-for-ai-driven-drug-discovery
   title: "BioLLMs for AI-driven drug discovery"
   event: "Data Makers Fest"
@@ -14,6 +31,26 @@
   date: "2024-09"
   kind: talk
   video: "https://www.youtube.com/watch?v=kYw1Q3sC5iw"
+
+- id: delivering-generative-ai-aws-marketplace
+  title: "Overcoming the top 5 challenges to delivering generative AI"
+  event: "AWS Marketplace & Loka"
+  event_url: "https://pages.awscloud.com/awsmp-gim-qe9i-webinar-aim-generative-ai-poc-loka.html"
+  date: 2024-06-05
+  kind: talk
+  # The deck uses the alternate title "Fast-track your generative AI workloads into production".
+  slides: "https://pages.awscloud.com/rs/112-TZM-766/images/AWS%20%26%20Loka%20Webinar%20POC%20to%20Production%20Final.pdf?version=0"
+
+- id: nova-fct-genai-weekend-panel
+  # Programme title; no separate formal title is given for the discussion panel.
+  title: "Disrupting Business Performance with Generative AI"
+  event: "GenAI Weekend, NOVA FCT"
+  event_url: "https://execed.fct.unl.pt/intensive_skills_lab/genai-weekend-disrupting-business-performance-with-generative-ai/"
+  # The March 7 announcement names Telmo as a panellist at the March 16-17 event.
+  # Keep month precision rather than infer the exact panel day.
+  # https://hrportugal.sapo.pt/quer-aprofundar-conhecimentos-em-inteligencia-artificial-generativa-em-marco-vai-haver-um-curso-imersivo-de-dois-dias/
+  date: "2024-03"
+  kind: panel
 
 - id: biollms-aws-hcls-boston
   # Descriptive title based on the announcement; no formal session title is given.
