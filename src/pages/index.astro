@@ -17,10 +17,9 @@ const url = (path: string) => getRelativeLocaleUrl(locale, path);
 ---
 
 <Layout title="Telmo · Talks & notes">
-  <Header />
+  <Header home />
   <main id="main-content" class="app-layout home-content" tabindex="-1">
-    <section class="intro" aria-labelledby="hello">
-      <h1 id="hello">Hi, I’m Telmo.</h1>
+    <section class="intro" aria-label="Introduction">
       <p>This is my home for talks, slides and technical notes.</p>
       {config.socials.length > 0 && <Socials />}
     </section>
@@ -54,5 +53,5 @@ const url = (path: string) => getRelativeLocaleUrl(locale, path);
       )
     }
   </main>
-  <Footer />
+  <Footer noMarginTop />
 </Layout>
