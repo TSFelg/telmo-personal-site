@@ -130,13 +130,13 @@ a:hover {
   align-items: baseline;
 }
 .talk-date {
+  color: var(--muted-foreground);
   white-space: nowrap;
 }
-.talk-meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.talk-kind {
   color: var(--muted-foreground);
+  font-weight: 400;
+  white-space: nowrap;
 }
 .talk-title {
   font-size: var(--type-body);
@@ -208,16 +208,9 @@ a:hover {
   .talk-list > li {
     display: block;
   }
-  .talk-meta {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0 0.5em;
+  .talk-date {
+    display: block;
     margin-bottom: 0.125rem;
-  }
-  .talk-kind::before {
-    content: "·";
-    margin-right: 0.5em;
   }
 }
 ::view-transition-old(root),

@@ -22,21 +22,19 @@ const resourceHref = (href: string) =>
   {
     talks.map(({ id, data }) => (
       <li id={id}>
-        <div class="talk-meta">
-          <time
-            class="talk-date"
-            datetime={data.date.toISOString().slice(0, 7)}
-          >
-            {dateFormat.format(data.date)}
-          </time>
-          {data.kind !== "talk" && (
-            <span class="talk-kind">
-              {data.kind.charAt(0).toUpperCase() + data.kind.slice(1)}
-            </span>
-          )}
-        </div>
+        <time class="talk-date" datetime={data.date.toISOString().slice(0, 7)}>
+          {dateFormat.format(data.date)}
+        </time>
         <div>
-          <Heading class="talk-title">{data.title}</Heading>
+          <Heading class="talk-title">
+            {data.title}
+            {data.kind !== "talk" && (
+              <>
+                {"\u00a0"}
+                <span class="talk-kind">({data.kind})</span>
+              </>
+            )}
+          </Heading>
           <p class="talk-details">
             {data.event_url ? (
               <a href={data.event_url}>{data.event}</a>
